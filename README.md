@@ -5,6 +5,14 @@ relative score of players.
 
 ## Introduction
 
+The main purpose of rating system is to check and compare skill levels of different players.  
+Additional function is to support matchmaking process, thus creating interesting and balanced  
+games. The most widely used is Elo ranking system, it's used mainly to compare chess players.  
+More recent derivative called Glicko improves Elo rating by incorporating the variability  
+in parameter estimates. Although these systems are succesfully used in chess they work only  
+for two-player game. In video games often there are more than two players or teams competing  
+against each other. This creates demand for new more universal rating system.
+
 ## Qualities
 
 Good rating system should have certain qualities such as:
@@ -88,9 +96,9 @@ Elo rating system was created by Arpad Elo for rating chess players. Given Playe
 rating of ![Ra](https://render.githubusercontent.com/render/math?math=R_%7BA%7D)
 and Player B has rating of ![Rb](https://render.githubusercontent.com/render/math?math=R_%7BB%7D)
 the formula for expected score of Player A is  
-![Ea](https://render.githubusercontent.com/render/math?math=%5CLARGE%20E_%7BA%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BB%7D-R_%7BA%7D)%3A400%7D%7D%0D)  
+![Ea](https://render.githubusercontent.com/render/math?math=%5Clarge%20E_%7BA%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BB%7D-R_%7BA%7D)%3A400%7D%7D%0D)  
 Similarly the expected score for Player B is  
-![Eb](https://render.githubusercontent.com/render/math?math=%5CLARGE%20E_%7BB%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BA%7D-R_%7BB%7D)%3A400%7D%7D%0D)
+![Eb](https://render.githubusercontent.com/render/math?math=%5Clarge%20E_%7BB%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BA%7D-R_%7BB%7D)%3A400%7D%7D%0D)
 - inefficient by today's standards
 - don't adress all today's needs
 - very slow
