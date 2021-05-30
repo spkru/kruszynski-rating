@@ -75,9 +75,9 @@ These are the problems commonly found among rating systems:
 
 ### Interaction
 
-Players should not be both ranked and matchmaked based on the same statistics.
-For example if matchmaking system would be fed with K/D ratio, players can't
-be ranked based on that statistics, because everyone would end up with the same
+Players should not be both ranked and matchmaked based on the same statistics.  
+For example if matchmaking system would be fed with K/D ratio, players can't  
+be ranked based on that statistics, because everyone would end up with the same  
 K/D ratio.
 
 ## Other Rating Systems
@@ -97,6 +97,6 @@ Similarly the expected score for Player B is
 
 ## Dictionary
 
-Skill System - figure out how good players are
-Matchmaking System - puts players togheter into matches
-Ranking/Rating System - tells players how good they are
+Skill System - figure out how good players are  
+Matchmaking System - puts players togheter into matches  
+Ranking/Rating System - tells players how good they are  
