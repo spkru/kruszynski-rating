@@ -2,7 +2,6 @@
 
 Kruszyński rating is method of calculating player's score based on the outcome of the match and  
 relative score of players.
-<img src="https://render.githubusercontent.com/render/math?math=E%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(a-b)%2F400%7D%7D">
 
 ## Introduction
 
@@ -86,9 +85,7 @@ h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
 
 ### Elo
 
-$$
-E=\frac{1}{1+10^{(a-b)/400}}
-$$
+<img src="https://render.githubusercontent.com/render/math?math=E%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(a-b)%2F400%7D%7D">
 - inefficient by today's standards
 - don't adress all today's needs
 - very slow
