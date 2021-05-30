@@ -1,7 +1,9 @@
 # Kruszyński Rating
 
-Kruszyński rating is method of calculating player's score based on the outcome of the match and relative
-score of players.
+Kruszyński rating is method of calculating player's score based on the outcome of the match and  
+relative score of players.
+
+## Introduction
 
 ## Qualities
 
@@ -77,11 +79,15 @@ Players should not be both ranked and matchmaked based on the same statistics.
 For example if matchmaking system would be fed with K/D ratio, players can't
 be ranked based on that statistics, because everyone would end up with the same
 K/D ratio.
+h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
 
 ## Other Rating Systems
 
 ### Elo
 
+$$
+E=\frac{1}{1+10^{(a-b)/400}}
+$$
 - inefficient by today's standards
 - don't adress all today's needs
 - very slow
