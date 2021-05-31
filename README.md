@@ -32,7 +32,7 @@ Good rating system should have certain properties such as:
 - **flexibility** helps implement system to different types of competitive games
 - **predictability**, predicts match outcome correctly
 
-AdDitonal factors that could be put under consideration are:
+Additonal factors that could be put under consideration are:
 - quality matchmaking
 - accurate predictions
 - fun (approachable, fell of mystery, status)
@@ -45,26 +45,27 @@ Every rating system should follow these three principles:
 ### Online Games
 
 Rating algorithms for online games require to solve additional challenges.  
-As authors of [this paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/03/trueskill2.pdf)
-about TrueSkill 2™ rating system pointed out:  
-> After consulting with the makers of Gears of War and Halo, we have found that their top priorities are:  
-> 1. **Support for team games**. The system should support matches with any number of teams  
->    and any number of players on each team.  
+As authors of this paper[<sup>10</sup>][10] about TrueSkill 2™ rating system pointed out:  
+> After consulting with the makers of Gears of War and Halo, we have found  
+> that their top priorities are:  
+> 1. **Support for team games**. The system should support matches with any number of  
+>    teams and any number of players on each team.  
 > 2. **Changeable skill ratings**. It must be possible for a player’s skill rating to change,  
->    no matter how many matches they have played in the past. This ensures that players receive  
->    meaningful feedback on their performance.  
+>    no matter how many matches they have played in the past. This ensures that players  
+>    receive meaningful feedback on their performance.  
 > 3. **Compatibility** with an existing matchmaker. Existing matchmakers assume skill is  
 >    described by a single number. Players can easily understand a single ordered skill ranking.  
 > 4. **Aligned incentives**. The skill rating system should create incentives that align with the  
->    spirit of the game. For example, consider a team game where players cooperate to achieve  
->    a goal. An improperly-designed skill rating system could encourage players to impede their  
->    teammates. As another example, consider a system that increased skill rating according  
->    to the number of times a player healed themselves. This creates an incentive for a player  
->    to repeatedly injure themselves so that they could be healed. In general, the more control  
->    that a player has over a quantity, the less useful it is for skill rating.    
-> 5. **Low computational cost**. Skill updates are done on servers hosted by the game studio,
->    and skill ratings are stored in a database hosted by the game studio. This means that  
->    skill representations should be small and updates should be cheap.   
+>    spirit of the game. For example, consider a team game where players cooperate to  
+>    achieve a goal. An improperly-designed skill rating system could encourage players  
+>    to impede their teammates. As another example, consider a system that increased  
+>    skill rating according to the number of times a player healed themselves. This  
+>    creates an incentive for a player to repeatedly injure themselves so that they  
+>    could be healed. In general, the more control that a player has over a quantity,  
+>    the less useful it is for skill rating.  
+> 5. **Low computational cost**. Skill updates are done on servers hosted by the game  
+>    studio, and skill ratings are stored in a database hosted by the game studio.  
+>    This means that skill representations should be small and updates should be cheap.  
 
 ## Issues
 
@@ -126,12 +127,10 @@ K/D ratio.
 ### Elo
 
 Elo rating system was created by Arpad Elo for rating chess players. Given Player A has  
-rating of ![Ra](https://render.githubusercontent.com/render/math?math=R_%7BA%7D)
-and Player B has rating of ![Rb](https://render.githubusercontent.com/render/math?math=R_%7BB%7D)
-the formula for expected score of Player A is  
-![Ea](https://render.githubusercontent.com/render/math?math=%5Clarge%20E_%7BA%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BB%7D-R_%7BA%7D)%3A400%7D%7D%0D)  
+rating of ![Ra][a] and Player B has rating of ![Rb][b] the formula<sup>20</sup> for expected score of Player A is  
+![Ea][c]  
 Similarly the expected score for Player B is  
-![Eb](https://render.githubusercontent.com/render/math?math=%5Clarge%20E_%7BB%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BA%7D-R_%7BB%7D)%3A400%7D%7D%0D)
+![Eb][d]
 - inefficient by today's standards
 - don't address all today's needs
 - very slow
@@ -141,3 +140,19 @@ Similarly the expected score for Player B is
 Skill System - figure out how good players are  
 Matchmaking System - puts players together into matches  
 Ranking/Rating System - tells players how good they are
+
+## References
+
+[10] _T. Minka, R. Cleven, Y. Zaykov_  
+TrueSkill 2: An improved Bayesian skill rating system  
+
+[20] _Arpad Elo_
+The rating of Chessplayers
+
+
+[10]: https://www.microsoft.com/en-us/research/uploads/prod/2018/03/trueskill2.pdf
+
+[a]: https://render.githubusercontent.com/render/math?math=R_%7BA%7D
+[b]: https://render.githubusercontent.com/render/math?math=R_%7BB%7D
+[c]: https://render.githubusercontent.com/render/math?math=%5Clarge%20E_%7BA%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BB%7D-R_%7BA%7D)%3A400%7D%7D%0D
+[d]: https://render.githubusercontent.com/render/math?math=%5Clarge%20E_%7BB%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BA%7D-R_%7BB%7D)%3A400%7D%7D%0D
