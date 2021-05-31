@@ -1,5 +1,8 @@
 # Kruszyński Rating
 
+**Szymon P. Kruszyński**  
+_May 30, 2021_
+
 Kruszyński rating is method of calculating player's score based on the outcome of the match and  
 relative score of players.
 
@@ -9,7 +12,7 @@ The main purpose of rating system is to check and compare skill levels of differ
 Additional function is to support matchmaking process, thus creating interesting and balanced  
 games. The most widely used is Elo ranking system, it's used mainly to compare chess players.  
 More recent derivative called Glicko improves Elo rating by incorporating the variability  
-in parameter estimates. Although these systems are succesfully used in chess they work only  
+in parameter estimates. Although these systems are successfully used in chess they work only  
 for two-player game. In video games often there are more than two players or teams competing  
 against each other. This creates demand for new more universal rating system.
 
@@ -24,12 +27,12 @@ assumptions. This paper focuses on making skill ratings more accurate by making 
 Good rating system should have certain properties such as:
 - **credibility** or fairness gives ability to accurately estimate player skills based on score
 - **simplicity**, being able to calculate and understand algorithm make it feels "fair"
-- **constant value**, lack of rating inflation let players track their progress throught time
+- **constant value**, lack of rating inflation let players track their progress through time
 - **quick convergence** to the player true skill
-- **flexibility** helps implement system to different types of competetive games
+- **flexibility** helps implement system to different types of competitive games
 - **predictability**, predicts match outcome correctly
 
-Aditonal factors that could be put under consideration are:
+AdDitonal factors that could be put under consideration are:
 - quality matchmaking
 - accurate predictions
 - fun (approachable, fell of mystery, status)
@@ -41,7 +44,7 @@ Every rating system should follow these three principles:
 
 ### Online Games
 
-Rating algorithms for online games require to solve additional challenges.
+Rating algorithms for online games require to solve additional challenges.  
 As authors of [this paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/03/trueskill2.pdf)
 about TrueSkill 2™ rating system pointed out:  
 > After consulting with the makers of Gears of War and Halo, we have found that their top priorities are:  
@@ -109,7 +112,7 @@ These are the problems commonly found among rating systems:
 ### Skill Depth
 
 - good skill-based matchmaking allows skill depth
-- less depth makes recognizng skills harder
+- less depth makes recognizing skills harder
 
 ### Interaction
 
@@ -130,11 +133,11 @@ the formula for expected score of Player A is
 Similarly the expected score for Player B is  
 ![Eb](https://render.githubusercontent.com/render/math?math=%5Clarge%20E_%7BB%7D%3D%5Cfrac%7B1%7D%7B1%2B10%5E%7B(R_%7BA%7D-R_%7BB%7D)%3A400%7D%7D%0D)
 - inefficient by today's standards
-- don't adress all today's needs
+- don't address all today's needs
 - very slow
 
 ## Dictionary
 
 Skill System - figure out how good players are  
-Matchmaking System - puts players togheter into matches  
+Matchmaking System - puts players together into matches  
 Ranking/Rating System - tells players how good they are
