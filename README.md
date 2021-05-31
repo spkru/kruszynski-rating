@@ -146,11 +146,12 @@ Ranking/Rating System - tells players how good they are
 [10] _T. Minka, R. Cleven, Y. Zaykov_  
 TrueSkill 2: An improved Bayesian skill rating system  
 
-[20] _Arpad Elo_
+[20] _Arpad Elo_  
 The rating of Chessplayers
 
 
 [10]: https://www.microsoft.com/en-us/research/uploads/prod/2018/03/trueskill2.pdf
+[20]: https://en.wikipedia.org/wiki/Elo_rating_system
 
 [a]: https://render.githubusercontent.com/render/math?math=R_%7BA%7D
 [b]: https://render.githubusercontent.com/render/math?math=R_%7BB%7D
