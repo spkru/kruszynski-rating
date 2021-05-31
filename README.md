@@ -13,9 +13,14 @@ in parameter estimates. Although these systems are succesfully used in chess the
 for two-player game. In video games often there are more than two players or teams competing  
 against each other. This creates demand for new more universal rating system.
 
-## Qualities
+### Skill Rating
+The skill rating of a player is an estimate of their ability to win the next match, based on  
+the results of their previous matches. A skill rating system is only as good as its underlying  
+assumptions. This paper focuses on making skill ratings more accurate by making better assumptions.
 
-Good rating system should have certain qualities such as:
+## Design Criteria
+
+Good rating system should have certain properties such as:
 - **credibility** or fairness gives ability to accurately estimate player skills based on score
 - **simplicity**, being able to calculate and understand algorithm make it feels "fair"
 - **constant value**, lack of rating inflation let players track their progress throught time
@@ -32,6 +37,38 @@ Every rating system should follow these three principles:
 - rating goes up on wins
 - rating goes down on losses
 - amount depends on opponent strenght
+
+### Online Games
+
+As authors of [this paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/03/trueskill2.pdf)
+about TrueSkill 2™ skill rating system pointed out:  
+> After consulting with the makers of Gears of War and Halo, we have found that their top priorities are:  
+> 1. Support for team games. The system should support matches with any number of teams  
+>    and any number of players on each team.  
+> 2. Changeable skill ratings. It must be possible for a player’s skill rating to change, no  
+>    matter how many matches they have played in the past. This ensures that players receive  
+>    meaningful feedback on their performance.  
+> 3. Compatibility with an existing matchmaker. Existing matchmakers assume skill is described  
+>    by a single number. Players can easily understand a single ordered skill ranking.  
+> 4. Aligned incentives. The skill rating system should create incentives that align with the  
+>    spirit of the game. For example, consider a team game where players cooperate to achieve  
+>    a goal. An improperly-designed skill rating system could encourage players to impede their  
+>    teammates. As another example, consider a system that increased skill rating according  
+>    to the number of times a player healed themselves. This creates an incentive for a player  
+>    to repeatedly injure themselves so that they could be healed. In general, the more control  
+>    that a player has over a quantity, the less useful it is for skill rating.  
+> 5. Minimal training data requirements. The most important time to have good matchmaking  
+>    is immediately after the launch of a game. Unfortunately, this is also when there is the  
+>    least amount of data available to train a model. Even if the game has a large player base,  
+>    there tends to be a small amount of training data per player.  
+> 6. Low computational cost. Skill updates are done on servers hosted by the game studio, and  
+>    skill ratings are stored in a database hosted by the game studio. This means that skill  
+>    representations should be small and updates should be cheap.  
+> 7. Minimal tuning. Game studios generally do not have personnel with the knowledge and  
+>    free time available to tune the skill rating system after launch. But they do make plenty  
+>    of other changes to the game, such as adding new game modes, new player abilities, and  
+>    re-balancing game mechanics. The skill rating system needs to automatically adapt to  
+>    these kinds of changes.  
 
 ## Issues
 
@@ -107,4 +144,4 @@ Similarly the expected score for Player B is
 
 Skill System - figure out how good players are  
 Matchmaking System - puts players togheter into matches  
-Ranking/Rating System - tells players how good they are  
+Ranking/Rating System - tells players how good they are
