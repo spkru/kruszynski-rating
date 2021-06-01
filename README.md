@@ -4,7 +4,10 @@
 _May 30, 2021_
 
 Kruszyński rating is method of calculating player's score based on the outcome of the match and  
-relative score of players.
+relative score of players. Player's score increases when winning, and decreases when losing.  
+The amount by which score change depends on they relative rating of player and the opponent.  
+When facing a stronger opponent, your rating rises significantly if you beat them and drops  
+only slightly if you lose; if your opponent is weaker than you, things go the other way round.
 
 ## Introduction
 
@@ -120,9 +123,19 @@ These are the problems commonly found among rating systems:
 Players should not be both ranked and matchmaked based on the same statistics.  
 For example if matchmaking system would be fed with K/D ratio, players can't  
 be ranked based on that statistics, because everyone would end up with the same  
-K/D ratio.
+K/D ratio.  
 
 ## Other Rating Systems
+
+### Comparison
+
+|                       |  Elo  | Glicko | TrueSkill | Kruszyński |  
+|-----------------------|:-----:|:------:|:---------:|:----------:|  
+| Two players           |  ✔️  |   ✔️   |    ✔️    |     ✔️     |  
+| Multiplayer           |  ❌  |   ❌   |    ✔️    |     ✔️     |  
+| Factions              |  ❌  |   ❌   |    ✔️    |     ✔️     |  
+| Assymetrical games    |  ❌  |   ❌   |    ❌    |     ✔️     |  
+|Adjustable match weight|  ❌  |   ❌   |    ❌    |     ✔️     |
 
 ### Elo
 
@@ -140,6 +153,10 @@ Similarly the expected score for Player B is
 Skill System - figure out how good players are  
 Matchmaking System - puts players together into matches  
 Ranking/Rating System - tells players how good they are
+
+## Acknowledgements
+
+Thanks to Łukasz Korycki for helpfull discussions.
 
 ## References
 
