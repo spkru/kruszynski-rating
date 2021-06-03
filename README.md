@@ -140,7 +140,7 @@ K/D ratio.
 ### Elo
 
 Elo rating system was created by Arpad Elo for rating chess players. Given Player A has  
-rating of ![Ra][a] and Player B has rating of ![Rb][b] the formula<sup>20</sup> for expected score of Player A is  
+rating of ![Ra][a] and Player B has rating of ![Rb][b] the formula[<sup>20</sup>][20] for expected score of Player A is  
 ![Ea][c]  
 Similarly the expected score for Player B is  
 ![Eb][d]
