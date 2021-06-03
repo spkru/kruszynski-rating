@@ -48,7 +48,7 @@ Every rating system should follow these three principles:
 ### Online Games
 
 Rating algorithms for online games require to solve additional challenges.  
-As authors of this paper[<sup>10</sup>][10] about TrueSkill 2™ rating system pointed out:  
+As authors of this paper[¹⁰][10] about TrueSkill 2™ rating system pointed out:  
 > After consulting with the makers of Gears of War and Halo, we have found  
 > that their top priorities are:  
 > 1. **Support for team games**. The system should support matches with any number of  
@@ -129,18 +129,18 @@ K/D ratio.
 
 ### Comparison
 
-|                       |  Elo  | Glicko | TrueSkill | Kruszyński |  
-|-----------------------|:-----:|:------:|:---------:|:----------:|  
-| Two players           |  ✔️  |   ✔️   |    ✔️    |     ✔️     |  
-| Multiplayer           |  ❌  |   ❌   |    ✔️    |     ✔️     |  
-| Factions              |  ❌  |   ❌   |    ✔️    |     ✔️     |  
-| Assymetrical games    |  ❌  |   ❌   |    ❌    |     ✔️     |  
-|Adjustable match weight|  ❌  |   ❌   |    ❌    |     ✔️     |
+|                         |  Elo  | Glicko | TrueSkill | Kruszyński |  
+|-------------------------|:-----:|:------:|:---------:|:----------:|  
+| Two players             |  ✔️  |   ✔️   |    ✔️    |     ✔️     |  
+| Multiplayer             |  ❌  |   ❌   |    ✔️    |     ✔️     |  
+| Factions                |  ❌  |   ❌   |    ✔️    |     ✔️     |  
+| Assymetrical games      |  ❌  |   ❌   |    ❌    |     ✔️     |  
+| Adjustable match weight |  ❌  |   ❌   |    ❌    |     ✔️     |
 
 ### Elo
 
 Elo rating system was created by Arpad Elo for rating chess players. Given Player A has  
-rating of ![Ra][a] and Player B has rating of ![Rb][b] the formula<sup>20</sup> for expected score of Player A is  
+rating of ![Ra][a] and Player B has rating of ![Rb][b] the formula[²⁰][20] for expected score of Player A is  
 ![Ea][c]  
 Similarly the expected score for Player B is  
 ![Eb][d]
